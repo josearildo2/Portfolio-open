@@ -1,24 +1,49 @@
 <script setup>
-    import usuario from '../assets/variaveis'
+    import { ref } from "vue"
+    import usuario from "../assets/variaveis"
+
+    const skills = ref(usuario.hard_skills)
 </script>
 
 <template>
 
     <!-- Home -->
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center">
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center mb-5">
         <h1 class="text-4xl font-bold mb-5 px-4">Bem vindo ao meu Portfólio</h1>
         <p class="text-xl max-w-5xl text-justify px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quaerat reprehenderit, vero iusto itaque odit nisi iste possimus quia omnis odio, rerum quisquam saepe, delectus nesciunt? Ut amet voluptatibus ad!</p>
     </section>
 
     <!-- Sobre -->
-    <section id="sobre" class="min-h-screen flex flex-col justify-center items-center bg-base-200">
+    <section id="sobre" class="min-h-screen flex flex-col justify-center items-center bg-base-200 mb-2">
         <h2 class="text-3xl font-bold px-4 mb-5">Sobre</h2>
-        <p class="text-xl justify-center px-4 max-w-5xl text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo consequuntur omnis magnam reiciendis tempore placeat. Ipsa unde dolor veniam autem culpa dignissimos asperiores, nobis odio perferendis ullam quaerat, molestiae iure.</p>
+        
+        <div class="flex flex-col lg:flex-row  w-full max-w-7xl gap-6">
+            <div class="lg:w-1/2 text-xl text-justify space-y-4 px-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores aliquam quo earum esse dolor nobis
+                     ipsa recusandae assumenda temporibus rerum cumque, perspiciatis beatae accusantium ea debitis unde eum ducimus aperiam.
+                </p>
+            </div>
+
+            <div class="hidden lg:flex">
+                <div class="divider lg:divider-horizontal"></div>
+            </div>
+
+            <div class="flex flex-col lg:hidden p-6">
+                <div class="divider divider-vertical"></div>
+            </div>
+
+            <div class="lg:w-1/2 flex flex-wrap gap-2 justify-center px-4 items-center mb-5">
+                <button type="button" class="btn btn-disabled" v-for="skill in skills" :key="skill">
+                    {{ skill }}
+                </button>
+            </div>
+        </div>
     </section>
 
-    <!-- Projetos -->
-    <section id="projetos" class="min-h-screen flex flex-col justify-center items-center">
-        <h2 class="text-3xl font-bold px-4 mb-5">Projetos</h2>
+    <!-- Experiência Profissional -->
+    <section id="experiencia" class="min-h-screen flex flex-col justify-center items-center mb-5">
+        <h2 class="text-3xl font-bold px-4 mb-5">Experiência Profissional</h2>
         <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical max-w-7xl px-4 mb-3">
             <li>
                 <div class="timeline-middle">

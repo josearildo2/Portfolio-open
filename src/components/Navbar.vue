@@ -14,7 +14,7 @@
                 <ul class="dropdown-content menu bg-base-100 rounded-box w-25 shadow">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#experiencia">Experiência</a></li>
                 </ul>
             </div>
             <div class="avatar">
@@ -30,7 +30,7 @@
             <ul class="menu menu-horizontal">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
             </ul>
         </div>
     </div>
